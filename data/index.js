@@ -9,5 +9,10 @@ module.exports = {
       month: 2592000,
       year: 31536000
     }
+  },
+  coupons: {
+    duration: {
+      month: 2592000
+    }
   }
 };
