@@ -10,6 +10,7 @@
     "mock-stripe-server": "./index.js"
   },
   "dependencies": {
+    "minimist": "^1.2.0",
     "restify": "^5.0.1"
   },
   "devDependencies": {

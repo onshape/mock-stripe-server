@@ -14,5 +14,10 @@ module.exports = {
     duration: {
       month: 2592000
     }
+  },
+  trial: {
+    duration: {
+      day: 86400
+    }
   }
 };

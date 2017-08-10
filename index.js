@@ -5,10 +5,12 @@ const fs = require('fs');
 
 let config;
 
-if (process.argv[2]) {
-  console.log(`Loading config file ${ process.argv[2] }...`);
+const options = require('minimist')(process.argv.slice(2));
+
+if (options.c) {
+  console.log(`Loading config file ${ options.c }...`);
   try {
-    config = JSON.parse(fs.readFileSync(process.argv[2]));
+    config = JSON.parse(fs.readFileSync(options.c));
   } catch (error) {
     console.log('Failed to load config file: ', error);
   }
