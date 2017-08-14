@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "minimist": "^1.2.0",
+    "request": "^2.81.0",
     "restify": "^5.0.1"
   },
   "devDependencies": {
     "eslint": "^4.2.0",
     "mocha": "^3.4.2",
-    "request": "^2.81.0",
     "stripe": "^4.23.1"
   },
   "scripts": {
