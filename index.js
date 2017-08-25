@@ -20,8 +20,9 @@ if (options._.includes('start')) {
   const spawn = child_process.spawn(process.argv[1], args, {
     argv0: process.argv[0],
     detached: true,
-    stdio: 'inherit'
+    stdio: 'ignore'
   });
+  spawn.unref();
   process.exit(0);
 } else if (options._.includes('stop')) {
   try {

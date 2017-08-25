@@ -1,0 +1,15 @@
+.stripe-blue {
+    background-color: #3490CE !important;
+}
+
+.stripe-text-blue {
+    color: #3490CE !important;
+}
+
+.table-click {
+    cursor: pointer !important;
+}
+
+[v-cloak] {
+    display: none;
+}
