@@ -19,6 +19,7 @@ if (options._.includes('start')) {
   }
   const spawn = child_process.spawn(process.argv[1], args, {
     argv0: process.argv[0],
+    cwd: __dirname,
     detached: true,
     stdio: 'ignore'
   });
