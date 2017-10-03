@@ -37,12 +37,15 @@ if (options._.includes('start')) {
   let config;
   options.pidFile = pidFile;
 
-  if (options.c) {
-    console.log(`Loading config file ${ options.c }...`);
+  options.config = options.config || options.c;
+  options.store = options.store || options.s;
+
+  if (options.config && fs.existsSync(options.config)) {
+    console.log(`Loading config file ${ options.config }...`);
     try {
-      config = JSON.parse(fs.readFileSync(options.c));
+      config = JSON.parse(fs.readFileSync(options.config));
     } catch (error) {
-      console.log('Failed to load config file: ', error);
+      console.log('Failed to load config file: ', error.message);
     }
   }
 

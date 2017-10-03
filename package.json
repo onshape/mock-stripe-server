@@ -1,6 +1,6 @@
 {
   "name": "mock-stripe-server",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Mock Stripe API Server",
   "main": "./lib/stripeServer.js",
   "repository": "git@github.com:mdbarr/mock-stripe-server.git",
@@ -22,7 +22,7 @@
   "scripts": {
     "fix": "./node_modules/.bin/eslint --fix **/*.js || exit 0",
     "lint": "./node_modules/.bin/eslint **/*.js || exit 0",
-    "start": "./index.js",
+    "start": "./index.js --config=/etc/mock-stripe-config.json",
     "test": "./node_modules/.bin/mocha ./test/testCore.js ./test/*Spec.js || exit 0"
   }
 }

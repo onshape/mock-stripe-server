@@ -47,7 +47,7 @@
             <v-dialog v-model="object" v-if="object" width="1000">
               <v-card>
                 <v-card-title class="headline"><v-icon class="pr-2">{{ current.icon }}</v-icon> {{ current.type | capitalize }} <span class="pl-2 stripe-text-blue">{{ rawObject.id }}</span></v-card-title>
-                <v-card-text><pre v-highlightjs="object"><code class="javascript"></code></pre></v-card-text>
+                <v-card-text><pre v-highlightjs="object"><code class="javascript code-modal"></code></pre></v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn class="green--text darken-1" flat="flat" @click.native="object = null">Close</v-btn>
