@@ -7,7 +7,7 @@ const args = process.argv.slice(2);
 const options = require('minimist')(args);
 let config;
 
-options.config = options.config || options.c || './config.json';
+options.config = options.config || options.c || '/etc/mock-stripe-config.json';
 options.store = options.store || options.s;
 
 if (!options.store && options.config && fs.existsSync(options.config)) {
