@@ -4,10 +4,9 @@ WORKDIR /usr/src/app
 
 COPY package.json .
 
-RUN npm install
+RUN npm install && npm install -g forever
 
 COPY . .
 
-EXPOSE 8080
-CMD [ "npm", "start" ]
-
+EXPOSE 5757
+CMD [ "forever", "./index.js" ]
