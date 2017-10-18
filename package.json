@@ -1,6 +1,6 @@
 {
   "name": "mock-stripe-server",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Mock Stripe API Server",
   "main": "./lib/stripeServer.js",
   "repository": "git@github.com:mdbarr/mock-stripe-server.git",
@@ -25,7 +25,7 @@
     "fix": "./node_modules/.bin/eslint --fix **/*.js || exit 0",
     "lint": "./node_modules/.bin/eslint **/*.js || exit 0",
     "push": "docker push docker-registry.dev.onshape.com:5000/mock-stripe",
-    "start": "./index.js",
+    "start": "forever ./index.js",
     "test": "./node_modules/.bin/mocha ./test/testCore.js ./test/*Spec.js || exit 0"
   }
 }
