@@ -1,5 +1,6 @@
 {
   "name": "mock-stripe-server",
+  "dockername": "docker-registry.dev.onshape.com:5000/mock-stripe",
   "version": "0.2.2",
   "description": "Mock Stripe API Server",
   "main": "./lib/stripeServer.js",
@@ -21,11 +22,12 @@
     "stripe": "^4.23.1"
   },
   "scripts": {
-    "build": "docker build -t docker-registry.dev.onshape.com:5000/mock-stripe .",
+    "build": "docker build -t $npm_package_dockername .",
+    "clean": "docker rmi $npm_package_dockername || exit 0",
     "docker": "docker run -d --rm --name mock-stripe -p 5757:5757 mock-stripe",
     "fix": "./node_modules/.bin/eslint --fix **/*.js || exit 0",
     "lint": "./node_modules/.bin/eslint **/*.js || exit 0",
-    "push": "docker push docker-registry.dev.onshape.com:5000/mock-stripe",
+    "push": "docker push $npm_package_dockername",
     "start": "forever ./index.js",
     "test": "./node_modules/.bin/mocha ./test/testCore.js ./test/*Spec.js || exit 0"
   }
